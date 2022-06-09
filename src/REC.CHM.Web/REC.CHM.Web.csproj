@@ -30,4 +30,8 @@
     <ProjectReference Include="..\REC.CHM.Infrastructure\REC.CHM.Infrastructure.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Folder Include="Endpoints\HouseEndPoints\" />
+  </ItemGroup>
+  
 </Project>

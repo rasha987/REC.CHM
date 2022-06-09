@@ -3,6 +3,8 @@ using REC.CHM.Core.ProjectAggregate;
 using REC.CHM.SharedKernel;
 using REC.CHM.SharedKernel.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using REC.CHM.Core.HouseAggregate;
+using REC.CHM.Core.CustomerAggregate;
 
 namespace REC.CHM.Infrastructure.Data;
 
@@ -17,8 +19,12 @@ public class AppDbContext : DbContext
     _dispatcher = dispatcher;
   }
 
-  public DbSet<ToDoItem> ToDoItems => Set<ToDoItem>();
-  public DbSet<Project> Projects => Set<Project>();
+  //public DbSet<ToDoItem> ToDoItems => Set<ToDoItem>();
+  //public DbSet<Project> Projects => Set<Project>();
+  public DbSet<House> Houses => Set<House>();
+  public DbSet<Address> Addresses => Set<Address>();
+  public DbSet<Customer> Customers => Set<Customer>();
+  public DbSet<Phone> Phones=> Set<Phone>();
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
